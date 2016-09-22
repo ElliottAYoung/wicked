@@ -19,7 +19,7 @@ module Wicked::Controller::Concerns::Path
   end
 
 
-  def wizard_path(goto_step = nil, options = {})
+  def wizard_path(goto_step = "FLOOBLE", options = {})
     options = options.respond_to?(:to_h) ? options.to_h : options
     options = { :controller => wicked_controller,
                 :action     => 'show',
@@ -29,4 +29,3 @@ module Wicked::Controller::Concerns::Path
     url_for(options)
   end
 end
-
