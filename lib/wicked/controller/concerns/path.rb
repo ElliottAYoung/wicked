@@ -19,11 +19,11 @@ module Wicked::Controller::Concerns::Path
   end
 
 
-  def wizard_path(goto_step = "FLOOBLE", options = {})
+  def wizard_path(goto_step = nil, options = {})
     options = options.respond_to?(:to_h) ? options.to_h : options
     options = { :controller => wicked_controller,
                 :action     => 'show',
-                :id         => goto_step || params[:id],
+                :id         => "Floop",
                 :only_path  => true
                }.merge options
     url_for(options)
