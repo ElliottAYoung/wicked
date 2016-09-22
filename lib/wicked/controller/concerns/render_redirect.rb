@@ -17,7 +17,7 @@ module Wicked::Controller::Concerns::RenderRedirect
       if resource.save
         @skip_to ||= @next_step
       else
-        @skip_to = nil
+        @skip_to ||= @next_step
       end
     end
   end
@@ -51,4 +51,3 @@ module Wicked::Controller::Concerns::RenderRedirect
     redirect_to wicked_final_redirect_path, options
   end
 end
-
